@@ -1,16 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Reproducción automática de la música de fondo
+    const audio = document.getElementById('background-music');
+    audio.loop = true; // Asegúrate de que el audio se repita en bucle
+
+    // Intenta reproducir el audio automáticamente
+    audio.play().catch(error => {
+        console.log('Error al intentar reproducir el audio: ', error);
+    });
+
+    // Controla la carga de la página y la preloader
     setTimeout(() => {
         document.body.classList.add('loaded');
     }, 5000);
 
+    // Datos para el carrusel y la galería
     const images = [
-        { src: '/roman.jpg', name: 'Roman', age: '20', occupation: 'El gato', instagram: 'https://www.instagram.com/roman_molina/' },
-        { src: '/theo.jpeg', name: 'Theo', age: '19', occupation: 'El menor', instagram: 'https://www.instagram.com/nombre2/' },
-        { src: '/alejo.jpeg', name: 'Alejo', age: '20', occupation: 'El gobernado', instagram: 'https://www.instagram.com/nombre2/' },
-        { src: '/eric.jpeg', name: 'Eric', age: '19', occupation: 'El Turro', instagram: 'https://www.instagram.com/nombre2/' },
-        { src: '/santi.jpeg', name: 'Santi', age: '21', occupation: '', instagram: 'https://www.instagram.com/nombre2/' },
-        { src: '/fran.jpeg', name: 'Franco', age: '21', occupation: '', instagram: 'https://www.instagram.com/nombre2/' },
-        { src: '/maxi.jpeg', name: 'Maxi', age: '20', occupation: 'lolero', instagram: 'https://www.instagram.com/nombre2/' },
+        { src: '/roman.jpg', name: 'Roman', age: '20', occupation: 'El gato', instagram: 'https://www.instagram.com/roman_molin/' },
+        { src: '/theo.jpeg', name: 'Theo', age: '19', occupation: 'El menor', instagram: 'https://www.instagram.com/theo.alvarengaok' },
+        { src: '/alejo.jpeg', name: 'Alejo', age: '20', occupation: 'El gobernado', instagram: 'https://www.instagram.com/alejobraga_' },
+        { src: '/eric.jpeg', name: 'Eric', age: '19', occupation: 'El Turro', instagram: 'https://www.instagram.com/alonsoericc_/' },
+        { src: '/santi.jpeg', name: 'Santi', age: '21', occupation: '', instagram: 'https://www.instagram.com/santicuevass_/' },
+        { src: '/fran.jpeg', name: 'Franco', age: '21', occupation: '', instagram: 'https://www.instagram.com/francopiazza_/' },
+        { src: '/maxi.jpeg', name: 'Maxi', age: '20', occupation: 'lolero', instagram: 'https://www.instagram.com/maximoopaz_/' },
     ];
 
     let currentIndex = 0;
