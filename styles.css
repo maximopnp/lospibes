@@ -4,6 +4,7 @@ body, h1, h2, p {
     padding: 0;
 }
 
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     background: #2c3e50;
@@ -13,6 +14,7 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    position: relative; /* Necesario para el fondo animado */
 }
 
 /* Fondo animado */
@@ -206,4 +208,27 @@ body.loaded .container {
 
 .gallery img:hover {
     transform: scale(1.1);
+}
+
+
+/* Estilos para el botón de música */
+.music-start {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.music-start button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.music-start button:hover {
+    background-color: #3498db;
 }
